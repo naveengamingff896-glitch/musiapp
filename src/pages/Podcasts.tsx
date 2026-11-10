@@ -3,6 +3,7 @@ import { Link, navigate } from '../lib/router';
 import type { Podcast, PodcastEpisode, Song } from '../data/types';
 import { formatCount, formatTime } from '../lib/format';
 import { useCatalog } from '../state/CatalogContext';
+import { useLibrary } from '../state/LibraryContext';
 import { usePlayer } from '../state/PlayerContext';
 import { useToast } from '../state/ToastContext';
 import { Artwork } from '../components/Artwork';
@@ -124,7 +125,7 @@ export function PodcastsPage() {
 export function PodcastPage({ id }: { id: string }) {
   const { catalog } = useCatalog();
   const { playSongs, current, isPlaying, toggle } = usePlayer();
-  const { downloadSongs, isDownloaded } = useLibrarySafe();
+  const { downloadSongs, isDownloaded } = useLibrary();
   const { notify } = useToast();
 
   const podcast = catalog.podcasts.find((item) => item.id === id);
@@ -223,10 +224,3 @@ export function PodcastPage({ id }: { id: string }) {
   );
 }
 
-// Local import indirection keeps the page readable while using the shared library hook.
-function useLibrarySafe() {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  return useLibraryFromContext();
-}
-
-import { useLibrary as useLibraryFromContext } from '../state/LibraryContext';
