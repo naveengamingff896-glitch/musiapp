@@ -1,0 +1,42 @@
+[
+  {
+    "id": "vennela",
+    "file": "/audio/vennela.mp3",
+    "durationSec": 41.7
+  },
+  {
+    "id": "gaali",
+    "file": "/audio/gaali.mp3",
+    "durationSec": 36.9
+  },
+  {
+    "id": "varṣam",
+    "file": "/audio/varṣam.mp3",
+    "durationSec": 36.9
+  },
+  {
+    "id": "jaanapada",
+    "file": "/audio/jaanapada.mp3",
+    "durationSec": 37.2
+  },
+  {
+    "id": "raatri",
+    "file": "/audio/raatri.mp3",
+    "durationSec": 38.9
+  },
+  {
+    "id": "deepam",
+    "file": "/audio/deepam.mp3",
+    "durationSec": 43.6
+  },
+  {
+    "id": "mass",
+    "file": "/audio/mass.mp3",
+    "durationSec": 39.3
+  },
+  {
+    "id": "lullaby",
+    "file": "/audio/lullaby.mp3",
+    "durationSec": 36.4
+  }
+]

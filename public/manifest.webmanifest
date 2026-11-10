@@ -1,0 +1,24 @@
+{
+  "name": "Mana Music — Telugu first Indian music",
+  "short_name": "Mana Music",
+  "description": "Mana Music is a Telugu-first Indian music streaming prototype with demo audio, playlists, radio and podcasts across 22 Indian languages.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Search", "short_name": "Search", "url": "./#/search" },
+    { "name": "Telugu Music", "short_name": "Telugu", "url": "./#/telugu" },
+    { "name": "Liked Songs", "short_name": "Liked", "url": "./#/liked" }
+  ]
+}
