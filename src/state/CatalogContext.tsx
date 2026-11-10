@@ -3,7 +3,18 @@ import type { ReactNode } from 'react';
 import { catalog as baseCatalog } from '../data/catalog';
 import { LICENSING_RECORDS, REPORT_SEEDS } from '../data/licensing';
 import { eraForYear } from '../data/types';
-import type { Album, Artist, Catalog, LicensingRecord, Playlist, ReportRecord, Song } from '../data/types';
+import type {
+  Album,
+  Artist,
+  Catalog,
+  LanguageInfo,
+  LicensingRecord,
+  Playlist,
+  Podcast,
+  RadioStation,
+  ReportRecord,
+  Song,
+} from '../data/types';
 import type { MovieHit } from '../lib/search';
 import { usePersistentState } from '../lib/storage';
 
@@ -57,6 +68,9 @@ export type ArtistDraft = {
 
 interface CatalogContextValue {
   catalog: Catalog;
+  languages: LanguageInfo[];
+  stations: RadioStation[];
+  podcasts: Podcast[];
   songs: Song[];
   albums: Album[];
   artists: Artist[];
@@ -348,6 +362,9 @@ export function CatalogProvider({ children }: { children: ReactNode }) {
     songs: merged.songs,
     albums: merged.albums,
     artists: merged.artists,
+    languages: merged.languages,
+    stations: merged.stations,
+    podcasts: merged.podcasts,
     playlists: merged.playlists,
     featuredPlaylists,
     movies,
