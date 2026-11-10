@@ -30,7 +30,7 @@ SCALES = {
 TRACKS = [
     {"id": "vennela", "root": 57, "scale": "mohanam", "bpm": 92, "bars": 16, "seed": 11, "drums": True, "kind": "melody"},
     {"id": "gaali", "root": 60, "scale": "desh", "bpm": 104, "bars": 16, "seed": 23, "drums": True, "kind": "melody"},
-    {"id": "varṣam", "root": 55, "scale": "kalyani", "bpm": 78, "bars": 12, "seed": 37, "drums": False, "kind": "melody"},
+    {"id": "varsham", "root": 55, "scale": "kalyani", "bpm": 78, "bars": 12, "seed": 37, "drums": False, "kind": "melody"},
     {"id": "jaanapada", "root": 53, "scale": "bhairavi", "bpm": 116, "bars": 18, "seed": 41, "drums": True, "kind": "melody"},
     {"id": "raatri", "root": 58, "scale": "hindolam", "bpm": 74, "bars": 12, "seed": 59, "drums": False, "kind": "melody"},
     {"id": "deepam", "root": 62, "scale": "mohanam", "bpm": 88, "bars": 16, "seed": 67, "drums": True, "kind": "melody"},
