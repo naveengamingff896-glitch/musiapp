@@ -13,9 +13,9 @@ import {
   HeartIcon,
   HomeIcon,
   LibraryIcon,
+  MicIcon,
   MoonIcon,
   PlaylistIcon,
-  PodcastIcon,
   RadioIcon,
   SearchIcon,
   SettingsIcon,
@@ -48,7 +48,7 @@ const YOUR_MUSIC: NavItem[] = [
 
 const LISTEN: NavItem[] = [
   { to: '/radio', label: 'Radio', icon: RadioIcon },
-  { to: '/podcasts', label: 'Podcasts', icon: PodcastIcon },
+  { to: '/podcasts', label: 'Podcasts', icon: MicIcon },
 ];
 
 const ACCOUNT: NavItem[] = [
