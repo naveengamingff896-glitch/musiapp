@@ -1,8 +1,6 @@
 import { useMemo } from 'react';
 import { Link, navigate } from '../lib/router';
-import type { Song } from '../data/types';
 import { ERA_BLURBS } from '../data/languages';
-import { formatCount } from '../lib/format';
 import { useCatalog } from '../state/CatalogContext';
 import { usePlayer } from '../state/PlayerContext';
 import { Artwork } from '../components/Artwork';
@@ -11,7 +9,7 @@ import { SongRow } from '../components/SongRow';
 import { PlayIcon, ShuffleIcon } from '../components/Icons';
 
 export function LanguagePage({ code }: { code: string }) {
-  const { songs, albums, artists, playlists, languages, songById, artistName } = useCatalog();
+  const { songs, albums, artists, playlists, languages, artistName } = useCatalog();
   const { playSongs } = usePlayer();
 
   const info = languages.find((item) => item.code === code);
@@ -160,7 +158,7 @@ export function LanguagePage({ code }: { code: string }) {
 }
 
 export function GenrePage({ name }: { name: string }) {
-  const { songs, playlists, artistName, songById } = useCatalog();
+  const { songs, playlists, artistName } = useCatalog();
   const { playSongs } = usePlayer();
 
   const genreSongs = songs.filter((song) => song.genre.toLowerCase() === name.toLowerCase()).sort((a, b) => b.plays - a.plays);

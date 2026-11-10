@@ -70,6 +70,7 @@ const initialState: LibraryState = {
   likedSongs: [],
   savedAlbums: [],
   followedArtists: [],
+  followedPlaylists: [],
   playlists: [],
   downloads: [],
   history: [],
@@ -161,16 +162,6 @@ const AUDIO_CACHE = 'mana-audio-v1';
 
 export function LibraryProvider({ children }: { children: ReactNode }) {
   const [state, setState] = usePersistentState<LibraryState>('mana.library.v1', initialState);
-
-  const update = useCallback(
-    (patch: Partial<LibraryState> | ((previous: LibraryState) => Partial<LibraryState>)) => {
-      setState((previous) => ({
-        ...previous,
-        ...(typeof patch === 'function' ? patch(previous) : patch),
-      }));
-    },
-    [setState]
-  );
 
   const toggleLike = useCallback(
     (songId: string) => {
@@ -530,5 +521,3 @@ export function useLibrary(): LibraryContextValue {
   if (!context) throw new Error('useLibrary must be used inside LibraryProvider');
   return context;
 }
-
-export { update };

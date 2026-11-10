@@ -1,6 +1,5 @@
 import { useMemo, useState } from 'react';
 import { Link, navigate } from '../lib/router';
-import type { Album, Song } from '../data/types';
 import { formatCount } from '../lib/format';
 import { newestAlbums } from '../lib/collections';
 import { useCatalog } from '../state/CatalogContext';

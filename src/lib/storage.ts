@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 function isPlainObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -27,7 +27,6 @@ export function usePersistentState<T>(
     }
   });
 
-  const initialRef = useRef(initial);
   useEffect(() => {
     try {
       window.localStorage.setItem(key, JSON.stringify(state));

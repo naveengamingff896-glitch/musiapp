@@ -7,7 +7,7 @@ export function AboutPage() {
   const { songs, albums, artists, playlists, podcasts, licensing } = useCatalog();
   const { downloads } = useLibrary();
 
-  const licensed = licensing.filter((record) => record.status === 'cleared').length;
+  const licensed = licensing.filter((record) => record.status === 'active').length;
 
   return (
     <div>

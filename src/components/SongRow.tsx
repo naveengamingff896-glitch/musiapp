@@ -16,7 +16,6 @@ import {
   DownloadIcon,
   HeartIcon,
   MoreIcon,
-  PauseIcon,
   PlayIcon,
   PlusIcon,
   QueueIcon,

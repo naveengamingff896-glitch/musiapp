@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, navigate } from '../lib/router';
 import type { Podcast, PodcastEpisode, Song } from '../data/types';
-import { formatCount, formatTime } from '../lib/format';
+import { formatTime } from '../lib/format';
 import { useCatalog } from '../state/CatalogContext';
 import { useLibrary } from '../state/LibraryContext';
 import { usePlayer } from '../state/PlayerContext';

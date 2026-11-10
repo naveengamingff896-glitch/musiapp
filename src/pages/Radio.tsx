@@ -3,7 +3,6 @@ import { navigate } from '../lib/router';
 import type { Song } from '../data/types';
 import { formatCount } from '../lib/format';
 import { useCatalog } from '../state/CatalogContext';
-import { useLibrary } from '../state/LibraryContext';
 import { usePlayer } from '../state/PlayerContext';
 import { useToast } from '../state/ToastContext';
 import { Artwork } from '../components/Artwork';
@@ -11,14 +10,14 @@ import { EmptyState, Notice, SectionHead } from '../components/MediaCard';
 import { PlayIcon, RadioIcon, ShuffleIcon } from '../components/Icons';
 
 export function RadioPage() {
-  const { catalog, languages, songById, artistName } = useCatalog();
+  const { stations: allStations, languages, songById, artistName } = useCatalog();
   const { playSongs, current, isPlaying, toggle } = usePlayer();
   const { notify } = useToast();
   const [language, setLanguage] = useState('te');
 
   const stations = useMemo(
-    () => catalog.radioStations.filter((station) => !language || station.language === language),
-    [catalog.radioStations, language],
+    () => allStations.filter((station) => !language || station.language === language),
+    [allStations, language],
   );
 
   const songsOf = (songIds: string[]): Song[] =>

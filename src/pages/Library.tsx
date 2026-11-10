@@ -22,7 +22,7 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 export function LibraryPage() {
-  const { songs, albums, artists, playlists, songById, albumById, artistById } = useCatalog();
+  const { songs, albums, playlists, songById, albumById, artistById } = useCatalog();
   const {
     likedSongs,
     savedAlbums,

@@ -6,7 +6,6 @@ import { useCatalog } from '../state/CatalogContext';
 import { useLibrary } from '../state/LibraryContext';
 import { usePlayer } from '../state/PlayerContext';
 import { useToast } from '../state/ToastContext';
-import { Artwork } from '../components/Artwork';
 import { EmptyState, Notice, SectionHead } from '../components/MediaCard';
 import { SongRow } from '../components/SongRow';
 import { DownloadIcon, PlayIcon, TrashIcon } from '../components/Icons';
